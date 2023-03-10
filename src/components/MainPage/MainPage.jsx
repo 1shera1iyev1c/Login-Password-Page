@@ -22,14 +22,12 @@ const MainPage = () => {
     const personVal = elPersonInput.value
     const passVal = elPassInput.value
 
-    if (personVal && passVal) {
       if (personVal == personVal && passVal == passVal) {
         window.location.replace('https://render-user-app.vercel.app/')
         console.log('salom');
       }else {
         alert("Xatolik!!! Qayta urunib ko'ring!")
       }
-    }
 
   }
 
@@ -39,11 +37,11 @@ const MainPage = () => {
         <img src={logo} alt="rasm" width={250} className="mb-5 d-block m-auto" />
         <div className='contentcha1 '>
             <img src={person} alt="person" width={30} />
-            <input type="text" ref={elPersonInput}/>
+            <input type="text" required ref={elPersonInput}/>
         </div> <br />
         <div className='contentcha '>
             <img src={lock} alt="lock" />
-            <input type={showPass ? "text" : "password"} ref={elPassInput} />
+            <input type={showPass ? "text" : "password"} required ref={elPassInput} />
             <button id='btn' onClick={togglePassShow}>
               {showPass ? <img src={eye} alt="eye" width={30} /> : <img src={eyeSlash} alt="eye" width={30} />}
             </button>

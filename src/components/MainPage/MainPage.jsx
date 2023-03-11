@@ -37,16 +37,16 @@ const MainPage = () => {
         <img src={logo} alt="rasm" width={250} className="mb-5 d-block m-auto" />
         <div className='contentcha1 '>
             <img src={person} alt="person" width={30} />
-            <input type="text" required ref={elPersonInput}/>
+            <input type="text" required ref={elPersonInput} placeholder="User Name" />
         </div> <br />
         <div className='contentcha '>
             <img src={lock} alt="lock" />
-            <input type={showPass ? "text" : "password"} required ref={elPassInput} />
+            <input type={showPass ? "text" : "password"} required ref={elPassInput} placeholder="Password" />
             <button id='btn' onClick={togglePassShow}>
               {showPass ? <img src={eye} alt="eye" width={30} /> : <img src={eyeSlash} alt="eye" width={30} />}
             </button>
         </div>
-        <button onClick={() => replaceWindows()} className='btn btn-primary container-fluid w-25 m-auto d-block mt-5'>Submit</button>
+        <button onClick={() => replaceWindows()} className='btn btn-primary container-fluid w-25 m-auto d-block mt-5'>Log in</button>
       </div>
     </>
   )
